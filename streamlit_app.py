@@ -67,13 +67,14 @@ def local_recommend(query, k=5):
         st.error(f"Error generating recommendations: {str(e)}")
         return None
 
-def api_recommend(query, k=5):
+def api_recommend(query, k=5, enhance=False):
     """
     Make a recommendation using the FastAPI endpoint.
     
     Args:
         query: Job description or role title
         k: Number of recommendations to return
+        enhance: Whether to enhance recommendations using Gemini
         
     Returns:
         Dictionary with recommendation results
@@ -82,7 +83,7 @@ def api_recommend(query, k=5):
         # Make the API request
         response = requests.get(
             "http://localhost:8000/recommend",
-            params={"query": query, "k": k}
+            params={"query": query, "k": k, "enhance": enhance}
         )
         
         # Check if the request was successful
@@ -112,24 +113,16 @@ with st.form(key="recommendation_form"):
         value=5
     )
     
-    # Selection for recommendation method
-    method = st.radio(
-        "Recommendation Method", 
-        options=["Local", "API"], 
-        index=0,
-        help="Local uses the FAISS index directly, API uses the FastAPI endpoint"
-    )
+    # Using only Gemini Enhancement
+    method = "API with Gemini Enhancement"
     
     # Submit button
     submit_button = st.form_submit_button(label="Get Recommendations")
     
     # Process the form submission
     if submit_button and query:
-        with st.spinner("Generating recommendations..."):
-            if method == "Local":
-                st.session_state.results = local_recommend(query, k)
-            else:
-                st.session_state.results = api_recommend(query, k)
+        with st.spinner("Generating recommendations with Gemini AI..."):
+            st.session_state.results = api_recommend(query, k, enhance=True)
 
 # Display the results
 if st.session_state.results:
@@ -137,6 +130,7 @@ if st.session_state.results:
     
     # Extract the results
     recommendations = st.session_state.results.get("results", [])
+    enhanced_content = st.session_state.results.get("enhanced", None)
     
     if not recommendations:
         st.warning("No recommendations found.")
@@ -151,7 +145,25 @@ if st.session_state.results:
             use_container_width=True
         )
         
+        # Display Gemini-enhanced insights if available
+        if enhanced_content:
+            st.subheader("Gemini AI Insights")
+            
+            # Display the summary
+            st.markdown(f"**Summary**: {enhanced_content.get('summary', '')}")
+            
+            # Display the recommended sequence
+            st.markdown(f"**Recommended Assessment Sequence**: {enhanced_content.get('recommended_sequence', '')}")
+            
+            # Display the assessment insights
+            st.markdown("**Assessment Insights:**")
+            for insight in enhanced_content.get('assessment_insights', []):
+                st.markdown(f"* **{insight.get('name', '')}**: {insight.get('relevance', '')}")
+            
+            st.markdown("---")
+        
         # Display detailed information for each recommendation
+        st.subheader("Detailed Assessment Information")
         for i, rec in enumerate(recommendations):
             with st.expander(f"{i+1}. {rec['name']} (Score: {rec['similarity_score']:.4f})"):
                 # Two columns for metadata and description
@@ -166,7 +178,7 @@ if st.session_state.results:
                 
                 with col2:
                     st.markdown("**Description:**")
-                    st.markdown(rec['description'])
+                    st.markdown(rec['description'] if rec['description'] else "No detailed description available")
 
 # Add some information about the application
 with st.sidebar:

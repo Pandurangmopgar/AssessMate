@@ -406,3 +406,66 @@
 2025-04-05 13:49:08,477 - utils - INFO - Successfully initialized Gemini embedding model
 2025-04-05 13:49:08,483 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
 2025-04-05 13:49:08,483 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 18:13:19,370 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 18:13:19,493 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 18:13:19,534 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 18:13:19,535 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 18:13:19,560 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 18:13:19,560 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 18:14:01,179 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 18:14:01,217 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 18:14:39,621 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 18:14:39,645 - utils - INFO - Successfully searched FAISS index for 3 nearest neighbors
+2025-04-05 18:14:39,648 - utils - INFO - Enhancing recommendations with Gemini
+2025-04-05 18:14:40,565 - utils - ERROR - Error enhancing recommendations: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+violations {
+}
+violations {
+}
+violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 11
+}
+]
+2025-04-05 18:16:14,535 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 18:16:14,588 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 18:16:14,626 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 18:16:14,627 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 18:16:14,643 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 18:16:14,644 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 18:17:04,704 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 18:17:04,711 - utils - INFO - Successfully searched FAISS index for 2 nearest neighbors
+2025-04-05 18:17:04,711 - utils - INFO - Enhancing recommendations with Gemini
+2025-04-05 18:17:07,775 - utils - INFO - Successfully enhanced recommendations with Gemini
+2025-04-05 18:17:37,063 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 18:17:37,063 - utils - INFO - Successfully searched FAISS index for 5 nearest neighbors
+2025-04-05 18:17:37,064 - utils - INFO - Enhancing recommendations with Gemini
+2025-04-05 18:17:41,589 - utils - INFO - Successfully enhanced recommendations with Gemini
+2025-04-05 18:20:40,613 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 18:20:40,648 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 18:20:40,672 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 18:20:40,672 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 18:20:40,679 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 18:20:40,679 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 18:21:01,246 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 18:21:01,253 - utils - INFO - Successfully searched FAISS index for 5 nearest neighbors
+2025-04-05 18:21:01,254 - utils - INFO - Enhancing recommendations with Gemini
+2025-04-05 18:21:05,134 - utils - INFO - Successfully enhanced recommendations with Gemini
+2025-04-05 18:23:26,793 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 18:23:26,823 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 18:23:26,836 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 18:23:26,838 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 18:23:26,842 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 18:23:26,842 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 18:24:15,965 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 18:24:16,011 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 18:24:16,043 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 18:24:16,043 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 18:24:16,050 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 18:24:16,051 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
