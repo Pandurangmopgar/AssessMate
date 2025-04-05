@@ -1,0 +1,408 @@
+2025-04-05 12:35:06,967 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:35:07,167 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:35:07,188 - utils - INFO - Step 1: Scraping the SHL catalog...
+2025-04-05 12:35:07,189 - utils - INFO - Starting to scrape https://www.shl.com/solutions/products/product-catalog/
+2025-04-05 12:35:10,430 - utils - INFO - Found 0 assessment links
+2025-04-05 12:35:10,431 - utils - WARNING - No assessment links found
+2025-04-05 12:35:10,442 - utils - ERROR - Failed to scrape SHL catalog. Exiting.
+2025-04-05 12:41:22,057 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:41:22,259 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:41:22,279 - utils - INFO - Step 1: Scraping the SHL catalog...
+2025-04-05 12:41:22,281 - utils - INFO - Starting to scrape SHL products
+2025-04-05 12:41:22,281 - utils - INFO - Attempting to scrape from products page: https://www.shl.com/solutions/products/
+2025-04-05 12:41:23,219 - utils - INFO - Selector '.product-card a' found 0 elements
+2025-04-05 12:41:23,242 - utils - INFO - Selector '.product-link' found 0 elements
+2025-04-05 12:41:23,257 - utils - INFO - Selector 'a.product-link' found 0 elements
+2025-04-05 12:41:23,271 - utils - INFO - Selector 'a.assessment-link' found 0 elements
+2025-04-05 12:41:23,323 - utils - INFO - Selector '.product-container a' found 0 elements
+2025-04-05 12:41:23,393 - utils - INFO - Selector '.assessment-container a' found 0 elements
+2025-04-05 12:41:23,462 - utils - INFO - Selector '.solutions-grid a' found 0 elements
+2025-04-05 12:41:23,536 - utils - INFO - Selector '.product-grid a' found 0 elements
+2025-04-05 12:41:23,554 - utils - INFO - Selector 'a[href*="product"]' found 42 elements
+2025-04-05 12:41:23,576 - utils - INFO - Selector 'a[href*="assessment"]' found 18 elements
+2025-04-05 12:41:23,577 - utils - INFO - Found 16 assessment links
+2025-04-05 12:41:23,577 - utils - INFO - Found 16 unique assessment links
+2025-04-05 12:41:23,577 - utils - INFO - Scraping assessment 1/16: https://www.shl.com/solutions/products/assessments/personality-assessment/
+2025-04-05 12:41:25,113 - utils - INFO - Scraping assessment 2/16: https://www.shl.com/solutions/products/video-interviews/
+2025-04-05 12:41:26,863 - utils - INFO - Scraping assessment 3/16: https://www.shl.com/solutions/products/assessments/job-focused-assessments/
+2025-04-05 12:41:28,582 - utils - INFO - Scraping assessment 4/16: https://www.shl.com/solutions/products/video-interviews/smart-interview-on-demand/
+2025-04-05 12:41:30,238 - utils - INFO - Scraping assessment 5/16: https://www.shl.com/solutions/products/assessments/assessment-and-development-centers/
+2025-04-05 12:41:31,709 - utils - INFO - Scraping assessment 6/16: https://www.shl.com/solutions/products/assessments/skills-and-simulations/
+2025-04-05 12:41:33,252 - utils - INFO - Scraping assessment 7/16: https://www.shl.com/solutions/products/hackathons/
+2025-04-05 12:41:34,915 - utils - INFO - Scraping assessment 8/16: https://www.shl.com/solutions/products/video-feedback/
+2025-04-05 12:41:36,543 - utils - INFO - Scraping assessment 9/16: https://www.shl.com/solutions/products/video-interviews/smart-interview-coding/
+2025-04-05 12:41:38,176 - utils - INFO - Scraping assessment 10/16: https://www.shl.com/solutions/products/360/
+2025-04-05 12:41:39,597 - utils - INFO - Scraping assessment 11/16: https://www.shl.com/resources/by-type/webinars/the-changing-role-of-skills-and-why-assessment-data-is-your-secret-weapon/
+2025-04-05 12:41:42,519 - utils - INFO - Scraping assessment 12/16: https://www.shl.com/solutions/products/product-catalog/
+2025-04-05 12:41:45,251 - utils - INFO - Scraping assessment 13/16: https://www.shl.com/solutions/products/assessments/cognitive-assessments/
+2025-04-05 12:41:47,040 - utils - INFO - Scraping assessment 14/16: https://www.shl.com/solutions/products/assessments/
+2025-04-05 12:41:48,706 - utils - INFO - Scraping assessment 15/16: https://www.shl.com/solutions/products/
+2025-04-05 12:41:50,428 - utils - INFO - Scraping assessment 16/16: https://www.shl.com/solutions/products/assessments/behavioral-assessments/
+2025-04-05 12:41:52,107 - utils - INFO - Scraped 16 assessments successfully
+2025-04-05 12:41:52,107 - utils - INFO - Successfully scraped 16 assessments from the SHL catalog
+2025-04-05 12:41:52,122 - utils - INFO - DataFrame successfully saved to shl_assessments.csv
+2025-04-05 12:41:52,122 - utils - INFO - Step 2: Generating embeddings for assessments...
+2025-04-05 12:41:52,122 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:41:52,128 - utils - INFO - Generating embedding for text 1/16
+2025-04-05 12:41:54,430 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:41:54,430 - utils - INFO - Generating embedding for text 2/16
+2025-04-05 12:41:55,447 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:41:55,447 - utils - INFO - Generating embedding for text 3/16
+2025-04-05 12:41:56,881 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:41:56,881 - utils - INFO - Generating embedding for text 4/16
+2025-04-05 12:41:58,105 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:41:58,107 - utils - INFO - Generating embedding for text 5/16
+2025-04-05 12:41:59,438 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:41:59,438 - utils - INFO - Generating embedding for text 6/16
+2025-04-05 12:42:00,666 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:00,667 - utils - INFO - Generating embedding for text 7/16
+2025-04-05 12:42:01,384 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:01,385 - utils - INFO - Generating embedding for text 8/16
+2025-04-05 12:42:02,100 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:02,100 - utils - INFO - Generating embedding for text 9/16
+2025-04-05 12:42:02,613 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:02,615 - utils - INFO - Generating embedding for text 10/16
+2025-04-05 12:42:03,125 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:03,125 - utils - INFO - Generating embedding for text 11/16
+2025-04-05 12:42:03,543 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:03,543 - utils - INFO - Generating embedding for text 12/16
+2025-04-05 12:42:04,074 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:04,074 - utils - INFO - Generating embedding for text 13/16
+2025-04-05 12:42:04,652 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:04,652 - utils - INFO - Generating embedding for text 14/16
+2025-04-05 12:42:05,171 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:05,172 - utils - INFO - Generating embedding for text 15/16
+2025-04-05 12:42:05,779 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:05,779 - utils - INFO - Generating embedding for text 16/16
+2025-04-05 12:42:06,196 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:42:06,196 - utils - INFO - Successfully generated 16 embeddings
+2025-04-05 12:42:06,196 - utils - INFO - Step 3: Building and saving FAISS index...
+2025-04-05 12:42:06,207 - utils - INFO - Successfully built FAISS index with 16 embeddings of dimension 768
+2025-04-05 12:42:06,215 - utils - INFO - Successfully saved FAISS index to shl_faiss_index.bin and DataFrame to shl_assessments.csv
+2025-04-05 12:42:06,215 - utils - INFO - Successfully built and saved FAISS index
+2025-04-05 12:42:06,215 - utils - INFO - Setup completed successfully!
+2025-04-05 12:42:37,329 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:42:37,385 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:42:37,406 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:42:37,421 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 12:42:37,421 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 12:43:22,762 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:43:22,818 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:45:34,613 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:45:34,665 - utils - INFO - Successfully searched FAISS index for 5 nearest neighbors
+2025-04-05 12:45:45,994 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:45:46,043 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:45:46,064 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:45:46,079 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 12:45:46,079 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 12:46:11,573 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:46:11,581 - utils - INFO - Successfully searched FAISS index for 5 nearest neighbors
+2025-04-05 12:46:50,945 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 12:46:50,945 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:46:52,734 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:46:52,745 - utils - INFO - Successfully searched FAISS index for 2 nearest neighbors
+2025-04-05 12:47:21,193 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:47:21,194 - utils - INFO - Successfully searched FAISS index for 2 nearest neighbors
+2025-04-05 12:50:47,764 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:50:47,825 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:50:47,846 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:50:47,856 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 12:50:47,856 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 12:51:13,621 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:51:13,674 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:51:13,700 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:51:13,706 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 12:51:13,706 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 12:51:58,271 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:51:58,287 - utils - INFO - Successfully searched FAISS index for 3 nearest neighbors
+2025-04-05 12:51:58,288 - utils - ERROR - Error formatting results: name 'np' is not defined
+2025-04-05 12:52:32,920 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 12:52:32,931 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:52:34,228 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 12:52:34,230 - utils - INFO - Successfully searched FAISS index for 3 nearest neighbors
+2025-04-05 12:52:34,231 - utils - ERROR - Error formatting results: name 'np' is not defined
+2025-04-05 12:55:27,324 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 12:55:27,397 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 12:55:27,424 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 12:55:27,434 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 12:55:27,434 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 13:16:09,944 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 13:16:10,076 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 13:16:10,098 - utils - INFO - Step 1: Scraping the SHL catalog...
+2025-04-05 13:16:10,099 - WDM - INFO - ====== WebDriver manager ======
+2025-04-05 13:16:16,862 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:16:16,862 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:16:16,864 - WDM - INFO - There is no [win64] chromedriver "135.0.7049.41" for browser google-chrome "135.0.7049.41" in cache
+2025-04-05 13:16:16,865 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:16:17,481 - WDM - INFO - WebDriver version 135.0.7049.42 selected
+2025-04-05 13:16:17,488 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.42/win32/chromedriver-win32.zip
+2025-04-05 13:16:17,489 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.42/win32/chromedriver-win32.zip
+2025-04-05 13:16:17,795 - WDM - INFO - Driver downloading response is 200
+2025-04-05 13:16:18,735 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:16:20,116 - WDM - INFO - Driver has been saved in cache [C:\Users\admin\.wdm\drivers\chromedriver\win64\135.0.7049.41]
+2025-04-05 13:16:20,189 - utils - ERROR - Error initializing Selenium WebDriver: [WinError 193] %1 is not a valid Win32 application
+2025-04-05 13:16:20,190 - utils - ERROR - Error during scraping: [WinError 193] %1 is not a valid Win32 application
+2025-04-05 13:19:00,550 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 13:19:00,597 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 13:19:00,613 - utils - INFO - Step 1: Scraping the SHL catalog...
+2025-04-05 13:19:00,613 - WDM - INFO - ====== WebDriver manager ======
+2025-04-05 13:19:06,734 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:19:07,150 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:19:07,566 - WDM - INFO - There is no [win64] chromedriver "135.0.7049.42" for browser google-chrome "135.0.7049" in cache
+2025-04-05 13:19:07,567 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:19:08,207 - WDM - INFO - WebDriver version 135.0.7049.42 selected
+2025-04-05 13:19:08,213 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.42/win32/chromedriver-win32.zip
+2025-04-05 13:19:08,214 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.42/win32/chromedriver-win32.zip
+2025-04-05 13:19:08,384 - WDM - INFO - Driver downloading response is 200
+2025-04-05 13:19:09,295 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-05 13:19:09,650 - WDM - INFO - Driver has been saved in cache [C:\Users\admin\.wdm\drivers\chromedriver\win64\135.0.7049.42]
+2025-04-05 13:19:11,935 - utils - INFO - Successfully initialized Selenium WebDriver
+2025-04-05 13:19:11,936 - utils - INFO - Starting to scrape SHL products
+2025-04-05 13:19:11,936 - utils - INFO - Extracting assessment links from SHL website
+2025-04-05 13:19:11,936 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/
+2025-04-05 13:19:15,328 - utils - INFO - Selector 'a[href*='assessment']' found 18 elements
+2025-04-05 13:19:15,618 - utils - INFO - Selector 'a[href*='product']' found 43 elements
+2025-04-05 13:19:16,124 - utils - INFO - Selector '.product-card a' found 0 elements
+2025-04-05 13:19:16,141 - utils - INFO - Selector '.solution-card a' found 0 elements
+2025-04-05 13:19:16,161 - utils - INFO - Selector '.card a' found 0 elements
+2025-04-05 13:19:16,179 - utils - INFO - Selector 'a.card-link' found 0 elements
+2025-04-05 13:19:16,200 - utils - INFO - Selector 'a.product-link' found 0 elements
+2025-04-05 13:19:16,213 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/
+2025-04-05 13:19:19,691 - utils - INFO - Selector 'a[href*='assessment']' found 17 elements
+2025-04-05 13:19:19,896 - utils - INFO - Selector 'a[href*='product']' found 56 elements
+2025-04-05 13:19:20,506 - utils - INFO - Selector '.product-card a' found 0 elements
+2025-04-05 13:19:20,520 - utils - INFO - Selector '.solution-card a' found 0 elements
+2025-04-05 13:19:20,535 - utils - INFO - Selector '.card a' found 0 elements
+2025-04-05 13:19:20,548 - utils - INFO - Selector 'a.card-link' found 0 elements
+2025-04-05 13:19:20,562 - utils - INFO - Selector 'a.product-link' found 0 elements
+2025-04-05 13:19:20,577 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/
+2025-04-05 13:19:24,360 - utils - INFO - Selector 'a[href*='assessment']' found 24 elements
+2025-04-05 13:19:24,641 - utils - INFO - Selector 'a[href*='product']' found 44 elements
+2025-04-05 13:19:25,110 - utils - INFO - Selector '.product-card a' found 0 elements
+2025-04-05 13:19:25,123 - utils - INFO - Selector '.solution-card a' found 0 elements
+2025-04-05 13:19:25,134 - utils - INFO - Selector '.card a' found 0 elements
+2025-04-05 13:19:25,147 - utils - INFO - Selector 'a.card-link' found 0 elements
+2025-04-05 13:19:25,159 - utils - INFO - Selector 'a.product-link' found 0 elements
+2025-04-05 13:19:25,177 - utils - INFO - Found 46 unique assessment links
+2025-04-05 13:19:25,177 - utils - INFO - Scraping assessment 1/46: https://www.shl.com/solutions/products/video-interviews/smart-interview-coding/
+2025-04-05 13:19:25,179 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/video-interviews/smart-interview-coding/
+2025-04-05 13:19:30,275 - utils - INFO - Scraping assessment 2/46: https://www.shl.com/resources/by-type/demos/skills-development-interactive-tour/
+2025-04-05 13:19:30,276 - utils - INFO - Navigating to: https://www.shl.com/resources/by-type/demos/skills-development-interactive-tour/
+2025-04-05 13:19:35,444 - utils - INFO - Scraping assessment 3/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/evolution-or-revolution/
+2025-04-05 13:19:35,444 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/evolution-or-revolution/
+2025-04-05 13:19:41,166 - utils - INFO - Scraping assessment 4/46: https://www.shl.com/solutions/products/assessments/behavioral-assessments/
+2025-04-05 13:19:41,166 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/behavioral-assessments/
+2025-04-05 13:19:46,339 - utils - INFO - Scraping assessment 5/46: https://www.shl.com/solutions/products/assessments/cognitive-assessments/
+2025-04-05 13:19:46,340 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/cognitive-assessments/
+2025-04-05 13:19:51,107 - utils - INFO - Scraping assessment 6/46: https://www.shl.com/solutions/products/assessments/personality-assessment/
+2025-04-05 13:19:51,108 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/personality-assessment/
+2025-04-05 13:19:55,991 - utils - INFO - Scraping assessment 7/46: https://www.shl.com/hr-priorities/skills-based-organizations/skills-based-talent-management/
+2025-04-05 13:19:55,991 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/skills-based-talent-management/
+2025-04-05 13:20:01,129 - utils - INFO - Scraping assessment 8/46: https://www.shl.com/solutions/products/assessments/assessment-and-development-centers/
+2025-04-05 13:20:01,131 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/assessment-and-development-centers/
+2025-04-05 13:20:05,957 - utils - INFO - Scraping assessment 9/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/break-it-down/
+2025-04-05 13:20:05,965 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/break-it-down/
+2025-04-05 13:20:11,867 - utils - INFO - Scraping assessment 10/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/where-to-start/
+2025-04-05 13:20:11,867 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/where-to-start/
+2025-04-05 13:20:16,676 - utils - INFO - Scraping assessment 11/46: https://www.shl.com/solutions/products/product-catalog/?start=0&type=1&type=1
+2025-04-05 13:20:16,677 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/?start=0&type=1&type=1
+2025-04-05 13:20:23,385 - utils - INFO - Scraping assessment 12/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/start-the-journey-with-shl/
+2025-04-05 13:20:23,385 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/start-the-journey-with-shl/
+2025-04-05 13:20:28,497 - utils - INFO - Scraping assessment 13/46: https://www.shl.com/solutions/products/360/
+2025-04-05 13:20:28,498 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/360/
+2025-04-05 13:20:33,236 - utils - INFO - Scraping assessment 14/46: https://www.shl.com/solutions/products/assessments/
+2025-04-05 13:20:33,237 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/
+2025-04-05 13:20:38,613 - utils - INFO - Scraping assessment 15/46: https://www.shl.com/solutions/products/product-catalog/view/sap-abap-advanced-level-new/
+2025-04-05 13:20:38,614 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-abap-advanced-level-new/
+2025-04-05 13:20:43,679 - utils - INFO - Scraping assessment 16/46: https://www.shl.com/solutions/products/product-catalog/view/sap-basis-new/
+2025-04-05 13:20:43,680 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-basis-new/
+2025-04-05 13:20:48,973 - utils - INFO - Scraping assessment 17/46: https://www.shl.com/solutions/products/product-catalog/?start=300&type=1&type=1
+2025-04-05 13:20:48,974 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/?start=300&type=1&type=1
+2025-04-05 13:20:54,859 - utils - INFO - Scraping assessment 18/46: https://www.shl.com/solutions/products/product-catalog/view/sap-bw-business-warehouse-new/
+2025-04-05 13:20:54,859 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-bw-business-warehouse-new/
+2025-04-05 13:21:00,767 - utils - INFO - Scraping assessment 19/46: https://www.shl.com/solutions/products/product-catalog/view/sap-materials-management-new/
+2025-04-05 13:21:00,767 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-materials-management-new/
+2025-04-05 13:21:06,000 - utils - INFO - Scraping assessment 20/46: https://www.shl.com/solutions/products/
+2025-04-05 13:21:06,001 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/
+2025-04-05 13:21:10,848 - utils - INFO - Scraping assessment 21/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/
+2025-04-05 13:21:10,848 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/
+2025-04-05 13:21:16,044 - utils - INFO - Scraping assessment 22/46: https://www.shl.com/solutions/products/product-catalog/?start=276&type=1&type=1
+2025-04-05 13:21:16,044 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/?start=276&type=1&type=1
+2025-04-05 13:21:22,238 - utils - INFO - Scraping assessment 23/46: https://www.shl.com/solutions/products/hackathons/
+2025-04-05 13:21:22,238 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/hackathons/
+2025-04-05 13:21:27,439 - utils - INFO - Scraping assessment 24/46: https://www.shl.com/solutions/products/video-interviews/
+2025-04-05 13:21:27,439 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/video-interviews/
+2025-04-05 13:21:32,913 - utils - INFO - Scraping assessment 25/46: https://www.shl.com/solutions/products/product-catalog/view/sap-hybris-new/
+2025-04-05 13:21:32,913 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-hybris-new/
+2025-04-05 13:21:38,256 - utils - INFO - Scraping assessment 26/46: https://www.shl.com/solutions/products/video-interviews/smart-interview-on-demand/
+2025-04-05 13:21:38,257 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/video-interviews/smart-interview-on-demand/
+2025-04-05 13:21:43,611 - utils - INFO - Scraping assessment 27/46: https://www.shl.com/hr-priorities/skills-based-organizations/skills-based-hiring/
+2025-04-05 13:21:43,612 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/skills-based-hiring/
+2025-04-05 13:21:48,893 - utils - INFO - Scraping assessment 28/46: https://www.shl.com/shldirect/en/practice-tests/
+2025-04-05 13:21:48,893 - utils - INFO - Navigating to: https://www.shl.com/shldirect/en/practice-tests/
+2025-04-05 13:21:53,735 - utils - INFO - Scraping assessment 29/46: https://www.shl.com/solutions/products/video-feedback/
+2025-04-05 13:21:53,735 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/video-feedback/
+2025-04-05 13:21:59,146 - utils - INFO - Scraping assessment 30/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/overcoming-obstacles/
+2025-04-05 13:21:59,146 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/overcoming-obstacles/
+2025-04-05 13:22:04,966 - utils - INFO - Scraping assessment 31/46: https://www.shl.com/solutions/products/product-catalog/view/sales-transformation-report-sales-manager/
+2025-04-05 13:22:04,966 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sales-transformation-report-sales-manager/
+2025-04-05 13:22:10,354 - utils - INFO - Scraping assessment 32/46: https://www.shl.com/solutions/products/assessments/job-focused-assessments/
+2025-04-05 13:22:10,354 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/job-focused-assessments/
+2025-04-05 13:22:16,171 - utils - INFO - Scraping assessment 33/46: https://www.shl.com/solutions/products/product-catalog/
+2025-04-05 13:22:16,171 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/
+2025-04-05 13:22:23,287 - utils - INFO - Scraping assessment 34/46: https://www.shl.com/solutions/products/product-catalog/?start=372&type=1&type=1
+2025-04-05 13:22:23,288 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/?start=372&type=1&type=1
+2025-04-05 13:22:30,112 - utils - INFO - Scraping assessment 35/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/why-skills/
+2025-04-05 13:22:30,113 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/why-skills/
+2025-04-05 13:22:35,824 - utils - INFO - Scraping assessment 36/46: https://www.shl.com/resources/by-type/webinars/the-changing-role-of-skills-and-why-assessment-data-is-your-secret-weapon/
+2025-04-05 13:22:35,824 - utils - INFO - Navigating to: https://www.shl.com/resources/by-type/webinars/the-changing-role-of-skills-and-why-assessment-data-is-your-secret-weapon/
+2025-04-05 13:22:51,129 - utils - INFO - Scraping assessment 37/46: https://www.shl.com/solutions/products/product-catalog/view/sap-business-objects-webi-new/
+2025-04-05 13:22:51,129 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-business-objects-webi-new/
+2025-04-05 13:22:56,384 - utils - INFO - Scraping assessment 38/46: https://www.shl.com/solutions/products/product-catalog/view/sales-transformation-report-2-0-sales-manager/
+2025-04-05 13:22:56,384 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sales-transformation-report-2-0-sales-manager/
+2025-04-05 13:23:02,300 - utils - INFO - Scraping assessment 39/46: https://www.shl.com/solutions/products/product-catalog/view/salesforce-development-new/
+2025-04-05 13:23:02,300 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/salesforce-development-new/
+2025-04-05 13:23:08,052 - utils - INFO - Scraping assessment 40/46: https://www.shl.com/solutions/products/product-catalog/view/sap-abap-intermediate-level-new/
+2025-04-05 13:23:08,052 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-abap-intermediate-level-new/
+2025-04-05 13:23:13,373 - utils - INFO - Scraping assessment 41/46: https://www.shl.com/solutions/products/product-catalog/view/sap-sd-sales-and-distribution-new/
+2025-04-05 13:23:13,374 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-sd-sales-and-distribution-new/
+2025-04-05 13:23:18,598 - utils - INFO - Scraping assessment 42/46: https://www.shl.com/solutions/products/assessments/skills-and-simulations/
+2025-04-05 13:23:18,598 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/assessments/skills-and-simulations/
+2025-04-05 13:23:24,367 - utils - INFO - Scraping assessment 43/46: https://www.shl.com/solutions/products/product-catalog/view/sap-hcm-human-capital-management-new/
+2025-04-05 13:23:24,367 - utils - INFO - Navigating to: https://www.shl.com/solutions/products/product-catalog/view/sap-hcm-human-capital-management-new/
+2025-04-05 13:23:30,274 - utils - INFO - Scraping assessment 44/46: https://www.shl.com/solutions/talent-management/skills-development/
+2025-04-05 13:23:30,274 - utils - INFO - Navigating to: https://www.shl.com/solutions/talent-management/skills-development/
+2025-04-05 13:23:35,913 - utils - INFO - Scraping assessment 45/46: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/why-now/
+2025-04-05 13:23:35,914 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/how-to-build-a-skills-based-organization/why-now/
+2025-04-05 13:23:41,737 - utils - INFO - Scraping assessment 46/46: https://www.shl.com/hr-priorities/skills-based-organizations/
+2025-04-05 13:23:41,738 - utils - INFO - Navigating to: https://www.shl.com/hr-priorities/skills-based-organizations/
+2025-04-05 13:23:47,233 - utils - INFO - Scraped 46 assessments successfully
+2025-04-05 13:23:50,003 - utils - INFO - WebDriver closed
+2025-04-05 13:23:54,109 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000255FE2BA090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a47f6626e6156e44ace7722a0713e848
+2025-04-05 13:23:58,193 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025580751650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a47f6626e6156e44ace7722a0713e848
+2025-04-05 13:24:02,302 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025580750050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a47f6626e6156e44ace7722a0713e848
+2025-04-05 13:24:06,400 - utils - INFO - WebDriver closed
+2025-04-05 13:24:06,400 - utils - INFO - Successfully scraped 46 assessments from the SHL catalog
+2025-04-05 13:24:06,423 - utils - INFO - DataFrame successfully saved to shl_assessments.csv
+2025-04-05 13:24:06,424 - utils - INFO - Step 2: Generating embeddings for assessments...
+2025-04-05 13:24:06,424 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 13:24:06,435 - utils - INFO - Generating embedding for text 1/46
+2025-04-05 13:24:07,216 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:07,217 - utils - INFO - Generating embedding for text 2/46
+2025-04-05 13:24:08,377 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:08,377 - utils - INFO - Generating embedding for text 3/46
+2025-04-05 13:24:08,910 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:08,912 - utils - INFO - Generating embedding for text 4/46
+2025-04-05 13:24:10,248 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:10,248 - utils - INFO - Generating embedding for text 5/46
+2025-04-05 13:24:10,779 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:10,779 - utils - INFO - Generating embedding for text 6/46
+2025-04-05 13:24:11,367 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:11,368 - utils - INFO - Generating embedding for text 7/46
+2025-04-05 13:24:11,888 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:11,889 - utils - INFO - Generating embedding for text 8/46
+2025-04-05 13:24:12,403 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:12,403 - utils - INFO - Generating embedding for text 9/46
+2025-04-05 13:24:13,134 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:13,134 - utils - INFO - Generating embedding for text 10/46
+2025-04-05 13:24:13,545 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:13,547 - utils - INFO - Generating embedding for text 11/46
+2025-04-05 13:24:14,031 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:14,032 - utils - INFO - Generating embedding for text 12/46
+2025-04-05 13:24:14,650 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:14,650 - utils - INFO - Generating embedding for text 13/46
+2025-04-05 13:24:15,160 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:15,160 - utils - INFO - Generating embedding for text 14/46
+2025-04-05 13:24:15,676 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:15,676 - utils - INFO - Generating embedding for text 15/46
+2025-04-05 13:24:16,186 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:16,186 - utils - INFO - Generating embedding for text 16/46
+2025-04-05 13:24:16,698 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:16,699 - utils - INFO - Generating embedding for text 17/46
+2025-04-05 13:24:17,206 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:17,207 - utils - INFO - Generating embedding for text 18/46
+2025-04-05 13:24:17,723 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:17,724 - utils - INFO - Generating embedding for text 19/46
+2025-04-05 13:24:18,133 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:18,134 - utils - INFO - Generating embedding for text 20/46
+2025-04-05 13:24:18,647 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:18,647 - utils - INFO - Generating embedding for text 21/46
+2025-04-05 13:24:19,153 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:19,154 - utils - INFO - Generating embedding for text 22/46
+2025-04-05 13:24:19,677 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:19,678 - utils - INFO - Generating embedding for text 23/46
+2025-04-05 13:24:20,089 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:20,089 - utils - INFO - Generating embedding for text 24/46
+2025-04-05 13:24:20,494 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:20,494 - utils - INFO - Generating embedding for text 25/46
+2025-04-05 13:24:20,898 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:20,898 - utils - INFO - Generating embedding for text 26/46
+2025-04-05 13:24:21,317 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:21,317 - utils - INFO - Generating embedding for text 27/46
+2025-04-05 13:24:21,717 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:21,718 - utils - INFO - Generating embedding for text 28/46
+2025-04-05 13:24:22,122 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:22,122 - utils - INFO - Generating embedding for text 29/46
+2025-04-05 13:24:22,639 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:22,639 - utils - INFO - Generating embedding for text 30/46
+2025-04-05 13:24:23,657 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:23,659 - utils - INFO - Generating embedding for text 31/46
+2025-04-05 13:24:24,174 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:24,175 - utils - INFO - Generating embedding for text 32/46
+2025-04-05 13:24:26,230 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:26,231 - utils - INFO - Generating embedding for text 33/46
+2025-04-05 13:24:26,939 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:26,939 - utils - INFO - Generating embedding for text 34/46
+2025-04-05 13:24:27,548 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:27,548 - utils - INFO - Generating embedding for text 35/46
+2025-04-05 13:24:27,995 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:27,997 - utils - INFO - Generating embedding for text 36/46
+2025-04-05 13:24:28,429 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:28,429 - utils - INFO - Generating embedding for text 37/46
+2025-04-05 13:24:28,839 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:28,839 - utils - INFO - Generating embedding for text 38/46
+2025-04-05 13:24:29,240 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:29,241 - utils - INFO - Generating embedding for text 39/46
+2025-04-05 13:24:29,645 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:29,646 - utils - INFO - Generating embedding for text 40/46
+2025-04-05 13:24:30,526 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:30,527 - utils - INFO - Generating embedding for text 41/46
+2025-04-05 13:24:30,938 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:30,938 - utils - INFO - Generating embedding for text 42/46
+2025-04-05 13:24:31,444 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:31,444 - utils - INFO - Generating embedding for text 43/46
+2025-04-05 13:24:31,952 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:31,952 - utils - INFO - Generating embedding for text 44/46
+2025-04-05 13:24:32,474 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:32,474 - utils - INFO - Generating embedding for text 45/46
+2025-04-05 13:24:32,980 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:32,980 - utils - INFO - Generating embedding for text 46/46
+2025-04-05 13:24:33,496 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:24:33,496 - utils - INFO - Successfully generated 46 embeddings
+2025-04-05 13:24:33,498 - utils - INFO - Step 3: Building and saving FAISS index...
+2025-04-05 13:24:33,512 - utils - INFO - Successfully built FAISS index with 46 embeddings of dimension 768
+2025-04-05 13:24:33,522 - utils - INFO - Successfully saved FAISS index to shl_faiss_index.bin and DataFrame to shl_assessments.csv
+2025-04-05 13:24:33,524 - utils - INFO - Successfully built and saved FAISS index
+2025-04-05 13:24:33,524 - utils - INFO - Setup completed successfully!
+2025-04-05 13:27:04,541 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 13:27:04,601 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 13:27:04,624 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 13:27:04,641 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 13:27:04,643 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 13:27:45,174 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 13:27:45,233 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 13:45:03,940 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 13:45:03,941 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 13:45:04,795 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:45:04,867 - utils - INFO - Successfully searched FAISS index for 5 nearest neighbors
+2025-04-05 13:45:31,806 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:45:31,818 - utils - INFO - Successfully searched FAISS index for 5 nearest neighbors
+2025-04-05 13:48:09,189 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 13:48:09,192 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 13:48:09,744 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 13:48:09,744 - utils - INFO - Successfully searched FAISS index for 5 nearest neighbors
+2025-04-05 13:49:08,355 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 13:49:08,456 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 13:49:08,477 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 13:49:08,483 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 13:49:08,483 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
