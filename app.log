@@ -523,3 +523,27 @@ metadata {
 , locale: "en-US"
 message: "API key not valid. Please pass a valid API key."
 ]
+2025-04-05 19:08:24,070 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 19:08:24,191 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 19:08:24,316 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:08:24,316 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:08:24,316 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:08:24,317 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:08:24,340 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:08:24,344 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:08:32,132 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:08:32,133 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:08:32,137 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:08:44,360 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:08:44,361 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:08:44,367 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:08:45,279 - utils - INFO - Successfully generated embedding of length 768
+2025-04-05 19:08:45,303 - utils - INFO - Successfully searched FAISS index for 3 nearest neighbors
+2025-04-05 19:08:45,305 - utils - INFO - Enhancing recommendations with Gemini
+2025-04-05 19:08:48,554 - utils - INFO - Successfully enhanced recommendations with Gemini
+2025-04-05 19:43:20,389 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:43:20,398 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:43:20,532 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:43:22,633 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:43:22,633 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:43:22,637 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
