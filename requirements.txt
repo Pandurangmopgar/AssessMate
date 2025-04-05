@@ -1,13 +1,14 @@
-selenium==4.15.2
-webdriver-manager==4.0.0
-beautifulsoup4==4.12.2
-pandas==2.1.0
-numpy==1.24.3
-faiss-cpu==1.7.4
-fastapi==0.104.1
-uvicorn==0.23.2
-python-dotenv==1.0.0
-google-generativeai==0.3.0
-streamlit==1.27.0
-python-multipart==0.0.6
-requests==2.31.0
+selenium==4.31.0
+webdriver-manager==4.0.2
+beautifulsoup4==4.13.3
+numpy==1.24.3        # Or run `pip show numpy` to get exact version
+pandas==2.1.0        # Or match your project
+
+faiss-cpu==1.8.0
+fastapi==0.110.2
+uvicorn==0.29.0
+python-dotenv==1.0.1
+google-generativeai==0.8.4
+streamlit==1.33.0
+python-multipart==0.0.9
+requests==2.32.3
