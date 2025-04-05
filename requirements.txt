@@ -1,7 +1,8 @@
 selenium==4.31.0
 webdriver-manager==4.0.2
 beautifulsoup4==4.13.3
-numpy==1.24.3        # Or run `pip show numpy` to get exact version
+numpy==1.25.2
+       # Or run `pip show numpy` to get exact version
 pandas==2.1.0        # Or match your project
 
 faiss-cpu==1.8.0

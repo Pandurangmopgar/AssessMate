@@ -471,3 +471,5 @@ violations {
 2025-04-05 18:24:16,051 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
 2025-04-05 18:28:54,951 - faiss.loader - INFO - Loading faiss with AVX2 support.
 2025-04-05 18:28:54,981 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 18:37:19,432 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 18:37:19,481 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
