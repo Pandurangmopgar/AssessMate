@@ -473,3 +473,53 @@ violations {
 2025-04-05 18:28:54,981 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
 2025-04-05 18:37:19,432 - faiss.loader - INFO - Loading faiss with AVX2 support.
 2025-04-05 18:37:19,481 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 19:05:14,181 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 19:05:14,301 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 19:05:14,331 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:05:14,332 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:05:14,352 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:05:14,352 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 19:05:25,448 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 19:05:25,518 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 19:05:25,549 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:05:25,549 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:05:25,561 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:05:25,562 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 19:05:34,821 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 19:05:34,872 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 19:05:34,897 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:05:34,897 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:05:34,904 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:05:34,905 - utils - INFO - Successfully loaded FAISS index and DataFrame on startup
+2025-04-05 19:06:01,382 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-05 19:06:01,413 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-05 19:06:01,474 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:06:01,475 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:06:01,475 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:06:01,475 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:06:01,481 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:06:01,483 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:06:48,591 - utils - INFO - Successfully initialized Gemini embedding model
+2025-04-05 19:06:48,592 - utils - INFO - Successfully initialized Gemini generative model
+2025-04-05 19:06:48,596 - utils - INFO - Successfully loaded FAISS index from shl_faiss_index.bin and DataFrame from shl_assessments.csv
+2025-04-05 19:06:50,325 - utils - ERROR - Error generating embedding: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-05 19:06:50,327 - utils - WARNING - Generated dummy embedding as Gemini API key is not available
+2025-04-05 19:06:50,358 - utils - INFO - Successfully searched FAISS index for 3 nearest neighbors
+2025-04-05 19:06:50,360 - utils - INFO - Enhancing recommendations with Gemini
+2025-04-05 19:06:50,704 - utils - ERROR - Error enhancing recommendations: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]

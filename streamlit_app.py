@@ -3,14 +3,18 @@ Streamlit app for SHL Assessment Recommendation System.
 """
 import streamlit as st
 import pandas as pd
-import requests
 import os
-from dotenv import load_dotenv
+import math
 import json
+import numpy as np
+from typing import Dict, List, Any, Optional
+from dotenv import load_dotenv
 
-from embedding import generate_gemini_embedding
-from search import FAISSSearchEngine
-from utils import format_results
+# Import necessary modules for recommendations
+from embedding import generate_gemini_embedding, EmbeddingGenerator
+from search import FAISSSearchEngine, search_index
+from utils import format_results, logger
+from enhancer import RecommendationEnhancer
 
 # Load environment variables
 load_dotenv()
@@ -21,6 +25,31 @@ st.set_page_config(
     page_icon="📊",
     layout="wide",
 )
+
+# Initialize components
+search_engine = None
+embedding_generator = None
+recommendation_enhancer = None
+
+try:
+    # Initialize embedding generator and recommendation enhancer
+    api_key = os.getenv("GEMINI_API_KEY")
+    embedding_generator = EmbeddingGenerator(api_key=api_key)
+    recommendation_enhancer = RecommendationEnhancer(api_key=api_key)
+    
+    # Load the pre-built FAISS index and DataFrame
+    index_path = "shl_faiss_index.bin"
+    df_path = "shl_assessments.csv"
+    
+    if os.path.exists(index_path) and os.path.exists(df_path):
+        search_engine = FAISSSearchEngine()
+        search_engine.load_index(index_path, df_path)
+        st.sidebar.success("Successfully loaded FAISS index and DataFrame")
+    else:
+        st.sidebar.error(f"Index file {index_path} or DataFrame file {df_path} not found. ")
+    
+except Exception as e:
+    st.sidebar.error(f"Error during initialization: {e}")
 
 # Title and description
 st.title("SHL Assessment Recommendation System")
@@ -33,43 +62,27 @@ Enter a job role, title, or paste a full job description to get personalized ass
 if 'results' not in st.session_state:
     st.session_state.results = None
 
-def local_recommend(query, k=5):
+def ensure_json_serializable(obj):
     """
-    Make a local recommendation without API, using the FAISS index directly.
-    
-    Args:
-        query: Job description or role title
-        k: Number of recommendations to return
-        
-    Returns:
-        Dictionary with recommendation results
+    Ensure an object is JSON serializable.
     """
-    try:
-        # Check if the index exists
-        if not os.path.exists("shl_faiss_index.bin") or not os.path.exists("shl_assessments.csv"):
-            st.error("FAISS index or assessments data not found. Please run setup.py first.")
-            return None
-        
-        # Load the search engine
-        search_engine = FAISSSearchEngine()
-        search_engine.load_index("shl_faiss_index.bin", "shl_assessments.csv")
-        
-        # Generate embedding for the query
-        query_embedding = generate_gemini_embedding(query)
-        
-        # Search for similar assessments
-        indices, scores = search_engine.search(query_embedding, k=k)
-        
-        # Format the results
-        results = format_results(indices, scores, search_engine.df)
-        return results
-    except Exception as e:
-        st.error(f"Error generating recommendations: {str(e)}")
-        return None
+    if isinstance(obj, dict):
+        return {k: ensure_json_serializable(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [ensure_json_serializable(item) for item in obj]
+    elif isinstance(obj, (int, bool, str, type(None))):
+        return obj
+    elif isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj):
+            return 0.0
+        return obj
+    else:
+        # Convert anything else to a string
+        return str(obj)
 
-def api_recommend(query, k=5, enhance=False):
+def generate_recommendations(query, k=5, enhance=True):
     """
-    Make a recommendation using the FastAPI endpoint.
+    Generate recommendations based on a query using the FAISS index.
     
     Args:
         query: Job description or role title
@@ -80,21 +93,55 @@ def api_recommend(query, k=5, enhance=False):
         Dictionary with recommendation results
     """
     try:
-        # Make the API request
-        response = requests.get(
-            "http://localhost:8000/recommend",
-            params={"query": query, "k": k, "enhance": enhance}
-        )
+        if not query.strip():
+            raise ValueError("Query cannot be empty")
+            
+        if search_engine is None or embedding_generator is None:
+            raise ValueError("Search engine or embedding generator not initialized")
+            
+        # Generate embedding for the query
+        query_embedding = embedding_generator.generate_embedding(query)
         
-        # Check if the request was successful
-        if response.status_code == 200:
-            return response.json()
-        else:
-            st.error(f"API Error: {response.status_code} - {response.text}")
-            return None
+        # Search the index
+        indices, scores = search_index(query_embedding, search_engine, k=k)
+        
+        # Sanitize scores
+        sanitized_scores = []
+        for score in scores:
+            if isinstance(score, (int, float)):
+                if math.isnan(score) or math.isinf(score):
+                    sanitized_scores.append(0.0)
+                else:
+                    sanitized_scores.append(float(score))
+            else:
+                sanitized_scores.append(0.0)
+        
+        # Format the results
+        results = format_results(indices, sanitized_scores, search_engine.df)
+        
+        # Ensure results are JSON serializable
+        results = ensure_json_serializable(results)
+        
+        # Enhance if requested
+        if enhance and recommendation_enhancer and recommendation_enhancer.model:
+            try:
+                logger.info("Enhancing recommendations with Gemini")
+                enhanced_results = recommendation_enhancer.enhance_recommendations(results, query)
+                
+                # Ensure enhanced results are JSON serializable
+                enhanced_results = ensure_json_serializable(enhanced_results)
+                return enhanced_results
+            except Exception as e:
+                logger.error(f"Error enhancing recommendations: {e}")
+                # Fall back to regular results if enhancement fails
+                return results
+        
+        return results
     except Exception as e:
-        st.error(f"Error connecting to API: {str(e)}")
+        st.error(f"Error generating recommendations: {str(e)}")
         return None
+
+# We no longer need the api_recommend function since all functionality is now built-in
 
 # Create a form for user input
 with st.form(key="recommendation_form"):
@@ -113,16 +160,13 @@ with st.form(key="recommendation_form"):
         value=5
     )
     
-    # Using only Gemini Enhancement
-    method = "API with Gemini Enhancement"
-    
     # Submit button
     submit_button = st.form_submit_button(label="Get Recommendations")
     
     # Process the form submission
     if submit_button and query:
         with st.spinner("Generating recommendations with Gemini AI..."):
-            st.session_state.results = api_recommend(query, k, enhance=True)
+            st.session_state.results = generate_recommendations(query, k, enhance=True)
 
 # Display the results
 if st.session_state.results:
