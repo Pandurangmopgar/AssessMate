@@ -3,7 +3,7 @@ webdriver-manager==4.0.2
 beautifulsoup4==4.13.3
 numpy
        # Or run `pip show numpy` to get exact version
-pandas==2.1.0        # Or match your project
+pandas        # Or match your project
 
 faiss-cpu==1.8.0
 fastapi==0.110.2
